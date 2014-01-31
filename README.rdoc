@@ -1,0 +1,5 @@
+Retail Store
+
+ I understand there is some serious refactoring required for this application. Also it is not the most customer friendly store yet.  This application still has a lot of code that needs to be added.  The images were removed and paperclip is not installed.
+
+-Antonio Irizarry

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> 
+	
+		<div class="cart_total">
+			<% if @cart %>
+				<div id="cart">
+				  <%= render(@cart)%>
+				</div>
+			<% end %>
+		</div>
+
+<div class="logo">
+<%= link_to image_tag("Logo.png", :'data-mouseover' => "/logoover.png"), store_path %>
+</div>
+
+
+
+
+
+
+ <div id="checkout">
+	 <%= render "layouts/checkout" %>
+</div>
+
+
+</nav>
+
+

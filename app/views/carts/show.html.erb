@@ -1,0 +1,27 @@
+
+<div class="checkout_header col-lg-8 col-lg-offset-2" style="bottom-border:3px;">
+	  	<div class="checkout_col col-lg-3"> Name </div>
+	  	 <div class="checkout_col col-lg-3"> Quantity  </div>
+	  	 <div class="checkout_col col-lg-3"> Price </div>
+	     <div class="checkout_col col-lg-3"> Sizes</div>
+</div>
+
+
+	<% @cart.line_items.each do |item| %>
+	<div class="checkout_row col-lg-8 col-lg-offset-2 ">
+	  	<div class="checkout_col col-lg-3"> <%= item.product.title %>  </div>
+	  	 <div class="checkout_col col-lg-3"> <%= item.quantity %>  </div>
+	  	 <div class="checkout_col col-lg-3"> <%= number_to_currency(item.total_price) %> </div>
+	     <div class="checkout_col col-lg-3"> <%= display_sizes(item.size) %> </div>
+	  <div class="checkout_col col-lg-12">
+	   <%= button_to 'Delete Item', item, class: "delete_item", controller: 'line_items', method: :delete %>
+	 </div>
+  </div>
+	<% end %>
+
+
+
+ </br>
+
+
+

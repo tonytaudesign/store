@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bakedfresh</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "https://js.stripe.com/v2/", "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- start of body -->
+
+	<%= render 'layouts/header' %>
+
+	<% if signed_in? %>
+	  </br></br></br>
+	  YOU ARE SIGNED INNN
+	<% end %>
+	       
+	<% if notice %>
+	  <div id="notice"><%= notice %></div>
+	<% end %>
+
+	<div class="container">
+	  <%= yield %>
+	</div>
+
+	<%= render 'layouts/footer' %>
+
+<!-- end of body -->
+
+
+	<%= render 'layouts/js' %>
+
+<script type="text/javascript" charset="utf-8">
+
+
+</script>
+
+</body>
+</html>
+  
+
+

@@ -1,0 +1,23 @@
+
+<% if @cart.respond_to? :line_items %>
+	<% if !@cart.line_items.empty? %>
+		<% if @page == "checkout" %>
+		<div class="buttons">
+			<%= button_to 'Continue Shopping', "/", action: 'store' %>
+
+			<%= button_to 'Empty cart', @cart, method: :delete,
+			   confirm: 'Are you sure you want to delete your cart?' %>
+
+		</div>
+				<form method="get" action="/order">
+				    <button class="checkout"type="submit"><span>Continue Check Out</span></button>
+				</form>
+		<% else %>
+
+				<form method="get" action="../carts/<%= @cart.id %>">
+				    <button class="checkout"type="submit"><span>Check Out</span></button>
+				</form>
+
+		<%end%>
+	<% end %>
+<%end%>

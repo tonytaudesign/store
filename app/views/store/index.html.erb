@@ -1,0 +1,21 @@
+<div id="store">
+<div class="row">
+
+
+
+<div class="shirts col-lg-8 col-lg-offset-2">
+<% @products.each do |product|  %>
+<div class="col-lg-4 col-md-4 col-sm-4 <%= product.title %> shirt_home">
+
+  <%= link_to image_tag(product.thumb_nail, alt: product.title), product_path(product.id)  %>
+</div>
+<!-- %= button_to 'Add to Cart', line_items_path(product_id: product), class: 'button', remote: true %> -->
+
+<% end %>
+</div>
+</div>
+
+
+
+
+</div>
