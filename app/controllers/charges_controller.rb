@@ -34,14 +34,14 @@ class ChargesController < ApplicationController
      @cart.line_items.each do |product|
         sizes = product.size.split(",")
         hash = Hash.new(0)
-        sizes.each {|sizes| hash[sizes] += 1}
+        sizes.each {|size| hash[size] += 1}
 
         product = Product.find(product.product_id)
-        product.small   =  product.small - sizes["s"]
-        product.medium  =  product.medium - sizes["m"]
-        product.large   =  product.large - sizes["l"]
-        product.xlarge  =  product.xlarge - sizes["xl"]
-        product.xxlarge =  product.xxlarge - sizes["xxl"]
+        product.small   =  product.small - hash["s"]
+        product.medium  =  product.medium - hash["m"]
+        product.large   =  product.large - hash["l"]
+        product.xlarge  =  product.xlarge - hash["xl"]
+        product.xxlarge =  product.xxlarge - hash["xxl"]
      end   
 
   end #end of create
