@@ -1,0 +1,64 @@
+﻿ALL PAGES
+
+
+0.0.0.0:4000/carts/6
+
+Make sure user can not add products
+Make sure user can add products
+
+
+
+
+
+
+
+When you submit your order It deducts sizes from what was ordered.
+	Subtract Sizes Method
+	Update Quantity Method
+
+when hit add to cart fadein/fadeout color on cart
+
+loading screen
+
+
+
+:::::::Completed:::::
+
+Have Sizes Ordered by Size not Alphabetically
+	created display sizes method
+
+
+
+Make app secure for Heroku
+
+Bakedfresh::Application.config.secret_key_base = 'a0859b895d49f38ec155156b6e7cb4617f8a1c6e265c5c4f4a08236402de332a49faa098d547fbf80239d10cae915c9ecae4f18c21ea53408ca7fa6f04ee67ca'
+
+
+
+When you clear your cart it should redirect you to home.  1:46pm
+1:46 called JobSpring
+
+Logo Hover on heroku color does not change
+
+0.0.0.0:4000/products/1
+
+Input for shirt sizes needs to be normal size
+
+When Cart is emptied?
+	Redirect to shop url and notify user with flash message that cart
+	destroyed.
+
+
+
+
+
+
+
+
+
+
+Future suggestions if you would like to contact me to update site:
+Needs Background design that fits layout – Cost of searching for background
+for locations: have map get bigger on page, so you do not lose your user to google maps.
+
+

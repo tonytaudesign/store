@@ -42,7 +42,10 @@ class ChargesController < ApplicationController
         product.large   =  product.large - hash["l"]
         product.xlarge  =  product.xlarge - hash["xl"]
         product.xxlarge =  product.xxlarge - hash["xxl"]
+        product.save
      end   
+
+     @cart.destroy
 
   end #end of create
 

@@ -22,10 +22,31 @@
 
 
 		<%= form_tag( line_items_path(product_id: @product), method: "post",class: "size", remote: true) do %>
-		<%= radio_button_tag(:size, "s", checked = true) %> Small </br>
-		<%= radio_button_tag(:size, "m") %> Medium </br>
-		<%= radio_button_tag(:size, "l") %> Large </br>
-		<%= radio_button_tag(:size, "xl") %> X-Large </br>
+		
+		<% if @product.small != 0 %>
+		  <%= radio_button_tag(:size, "s", checked = true) %> Small </br>
+		<% else %>
+			<span style="text-decoration:line-through; padding-left:20px;"> Small</span> </br>
+		<% end %>
+
+		<% if @product.medium != 0 %>
+		  <%= radio_button_tag(:size, "m") %> Medium </br>
+    <% else %>
+			<span style="text-decoration:line-through; padding-left:20px;"> Medium</span> </br>
+		<% end %>
+
+		<% if @product.large != 0 %>
+		  <%= radio_button_tag(:size, "l") %> Large </br>
+		<% else %>
+			<span style="text-decoration:line-through; padding-left:20px;"> Large</span> </br>
+		<% end %>
+
+		<% if @product.xlarge != 0  %>
+		  <%= radio_button_tag(:size, "xl") %> X-Large </br>
+		<% else %>
+			<span style="text-decoration:line-through; padding-left:20px;"> X-Large</span> </br>
+		<% end %>
+
 
 		<p class="chart">View Sizing Chart</p>
 
